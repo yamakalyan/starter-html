@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://i.pinimg.com/736x/61/f8/a3/61f8a31c19b6b5dead504afb6382b8e0.jpg"
+      />
+    </header>
+    <main>
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1464013778555-8e723c2f01f8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          class="img-background"
+        />
+        <h1>Understanding the fundamentals of state in JavaScript</h1>
+        <p>Designed by kalyan yama.</p>
+      </div>
+
+      <div class="introduction">
+        <p>
+          Chapter 3 from the book; Vumbula React — Co-authored by John Kagga
+        </p>
+
+        <p>
+          In earlier chapters, we’ve dealt mostly with functional React
+          components that do not require state management. This chapter’s main
+          focus is on state, its management and components that utilise it in
+          React.
+        </p>
+      </div>
+
+      <div class="section-1">
+        <h2>What is State?</h2>
+
+        <p>
+          State is a JavaScript object that stores a component’s dynamic data
+          and determines the component’s behaviour. Because state is dynamic, it
+          enables a component to keep track of changing information in between
+          renders and for it to be dynamic and interactive.
+        </p>
+
+        <p>
+          State is similar to props but unlike props, it is private to a
+          component and is controlled solely by the said component. In the
+          examples from previous chapters, the behaviour of components has
+          primarily depended on the props that are passed down to them. In those
+          cases, the components that receive the props have no control over them
+          because props are read-only.
+        </p>
+      </div>
+
+      <div class="section-2">
+        <h2>Adding State to a Class Component</h2>
+
+        <pre>
+class Greeting extends React.Component {
+  render() {
+    return &lt;h1&gt;I’m a component in need of some state! &lt;/h1&gt;;
+  }
+}
+        </pre>
+
+        <p>
+          Adding state to the Greeting component above involves defining within
+          the class component, a constructor function that assigns the initial
+          state using this.state.
+        </p>
+
+        <pre>
+class Greeting extends React.Component {
+  constructor(props) {
+    super(props);
+    // Define your state object here
+    this.state = {
+      name: 'Jane Doe'
+    };
+  }
+  render() {
+    return &lt;h1&gt;Hello { this.state.name }&lt;/h1&gt;;
+  }
+}
+        </pre>
+      </div>
+
+      <div class="third-section">
+        <h2>Investigating State using React Dev Tools</h2>
+
+        <p>
+          The devtools are available for download on both Mozilla Firefox
+          Add-ons and the Chrome Web Store. Follow the appropriate link to
+          install the devtools depending on which browser you have installed on
+          your computer.
+        </p>
+
+        <p>
+          Throughout the rest of this book, Chrome will be used as the browser
+          of choice. In order to confirm successful installation of the devtools
+          on Chrome, open the developer tools window using Cmd+Opt+I on a Mac or
+          Ctrl+Alt+I on a Windows PC. You should now see a React tab.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
